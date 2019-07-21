@@ -1,0 +1,117 @@
+\documentclass[a4paper]{article}
+\usepackage{graphics}
+\usepackage{shonan}
+
+\begin{document}
+
+% Generate a standard cover of an NII Shonan Meeting Report.
+\SHONANno{2019-149}
+\SHONANtitle{Programming Languages for\\ Distributed Systems}
+\SHONANauthor{%
+Philipp Haller\\
+Guido Salvaneschi\\
+Takuo Watanabe\\
+Gul Agha}
+\SHONANdate{May 27--30, 2019}
+\SHONANmakecover
+
+\title{A Guide for Authoring an\\ NII Shonan Meeting Report}
+\author{Organizers:\\
+Philipp Haller (KTH Royal Institute of Technology, Sweden)\\
+Guido Salvaneschi (Technical University of Darmstadt, Germany)\\
+Takuo Watanabe (Tokyo Institute of Technology, Japan)\\
+Gul Agha, (University of Illinois at Urbana-Champaign, USA)}
+\date{May 27--30, 2019}
+\maketitle
+
+Programming languages for distributed systems have been flourishing in the past, providing ideas for the development of complex systems that have been deeply influential. However, over the last few years, researchers focusing on this area are scattered across different communities with limited interaction. The goal of this Meeting is to build a community of researchers interested in programming languages for distributed systems, share current research results and set up a common research agenda.
+
+Developing distributed systems is a well-known, decades-old problem in Computer Science. Despite significant research effort has been dedicated to this area, developing distributed systems remains challenging. To complicate things, over the last years, we observed the rise of a complex scenario, with heterogeneous platforms, interconnected systems and decentralized functionalities. This model, referred to as edge computing, is driven – among others – by forces like the need of reducing latency in geodistributed services via multiple data centers, the advent of purpose- driven microservices, and the spreading of in-field decision intelligence in the Internet of Things.
+
+Programming languages are a fundamental tool to face the complexity of such a scenario. In comparison, however, these have seen modest improvements. Arguably, many ideas for supporting distribution adopted in production languages date back to the early '90s with CORBA/RMI, and even earlier with the Actor model and concurrent objects. In contrast, language abstractions have been mostly a key asset for determining the popularity of dedicated systems. For example, MapReduce takes advantage of purity to parallelise task processing, complex event processing adopts declarative programming to express sophisticated event correlations and Spark leverages functional programming for efficient fault recovery via lineage -- to provide some examples.
+
+There have been, notable advances in research on programming languages for distributed systems, such as cloud types for eventual consistency, conflict-free replicated data types (CRDT), language support for safe distribution of computations and fault tolerance, as well as programming frameworks for mixed IoT/Cloud development, such as Ericsson’s Calvin -- just to mention a few. However, these efforts have seen limited adoption and the researchers that have been carrying out these efforts are scattered across different communities that include verification and formal methods in general, programming language design, database theory, distributed systems, systems programming, data-centric programming, and web application development.
+
+In contrast, the field of programming languages for distributed systems has been a flourishing research area in the past, with influential contributions like Argus, Emerald, and Distributed OZ.
+
+\clearpage
+
+
+% Use the \section command if you want to show the section number.
+\section*{Overview of Talks}
+\SHONANabstract{Title of Talk 1}{%
+Speaker's Name, Speaker's Affiliation}
+The abstract of Talk 1 appears here.
+
+\SHONANabstract{Title of Talk 2}{%
+Speaker's Name, Speaker's Affiliation}
+The abstract of Talk 2 appears here.
+
+\SHONANabstract{Title of Talk 3}{%
+Speaker's Name, Speaker's Affiliation}
+The abstract of Talk 3 appears here.
+
+\bigskip
+
+As shown above, a report may present a collection of talk abstracts.
+The standard \LaTeX{} style provides the {\tt
+  \textbackslash{}SHONANabstract} command to show the title and the
+speaker's name and affiliation.  For each talk, put text in the
+following form:
+\begin{verbatim}
+\SHONANabstract{Title of Talk}{%
+Speaker's Name, Speaker's Affiliation}
+The abstract of this talk appears here.
+\end{verbatim}
+
+
+
+
+\section*{List of Participants}
+\begin{itemize}
+\item Participant 1, Affiliation 1
+\item Participant 2, Affiliation 2
+\item Participant 3, Affiliation 3
+\item Participant 4, Affiliation 4
+\item Participant 5, Affiliation 5
+\end{itemize}
+
+\clearpage
+
+%\section*{Meeting Schedule}
+%\begin{bfseries}
+%Check-in Day: January XX (Sun)
+%\end{bfseries}
+%\begin{itemize}
+%\item Welcome Banquet
+%\end{itemize}
+%\begin{bfseries}
+%{Day1: January XX (Mon)}
+%\end{bfseries}
+%\begin{itemize}
+%\item Talks and Discussions
+%\item Group Photo Shooting
+%\end{itemize}
+%\begin{bfseries}
+%Day2: January XX (Tue)
+%\end{bfseries}
+%\begin{itemize}
+%\item Talks and Discussions
+%\end{itemize}
+%\begin{bfseries}
+%Day3: January XX (Wed)
+%\end{bfseries}
+%\begin{itemize}
+%\item Talks and Discussions
+%\item Excursion and Main Banquet
+%\end{itemize}
+%\begin{bfseries}
+%Day4: January XX (Thu)
+%\end{bfseries}
+%\begin{itemize}
+%\item Talks and Discussions
+%\item Wrap up
+%\end{itemize}
+
+
+\end{document}
