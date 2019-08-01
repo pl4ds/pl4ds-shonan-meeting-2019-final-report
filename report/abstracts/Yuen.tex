@@ -1,1 +1,13 @@
-%TODO%
+Yampa is a domain-specific language of the Haskell programming
+language for hybrid systems, where its behaviour is continuous and
+discrete.  A Yampa program executes continuous behaviour in a discrete
+runtime environment by sampling.  If sampling should miss a critical
+point in switching continuous behaviour, the Yampa program may result
+in an unexpected error, although the program is correct in the
+continuous semantics.  Since samplings are uncertain in the runtime,
+correctness of a Yampa program depends on the runtime.  We describe
+the discrete behaviour of Yampa programs explicitly triggered by the
+sampling signal.  We translate a subclass of Yampa programs to
+transition systems composed with automata generating sampling triggers
+with jitter. Then, we check the behavioural properties of Yampa
+programs under explicit sampling by the Uppaal model checker.

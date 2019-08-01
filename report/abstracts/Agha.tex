@@ -1,1 +1,60 @@
-%TODO%
+The assumptions in the Actor model make it natural programming model
+for distributed systems.  These assumptions include concurrency,
+asynchronous operation, autonomy, encapsulation (isolation) of state.
+Actors interact by sending each other messages.  A major advantage of
+actors is that they enable a "big step" semantics: the behavior of
+individual actors in response to a message is atomic and thus can be
+considered as a macro-step, thus maintaining a separaration of what
+(interface) is done from how (representation) it is done.  Moroeover,
+a consequence of the macro-steps is that much inconsequential
+nondeterminism need not be considered.  Not surprisingly, Actor
+programming languages have been used to develop numerous large-scale
+commercial systems such as LinkedIn, Facebook Chat, the British
+National Health Service Portal, and fintech applications.
+
+While it is useful to think in terms of actors, programming
+distributed systems remains complicated.  A simple way to describe the
+challenge is that high-level actor programming needs abstractions to
+represent variants of "who, when, where, how long, and with what
+certainty?"
+
+-- Consider "who?"  In the Actor model, each actor has a unique
+address which must be known before a message can be sent to that actor
+(a security property called locality which simplifies reasoning).
+However, in some applications, it is useful to send messages to actors
+by specifying a type (or property) of actors rather than individual
+addresses which may not be known to the sender--something captured in
+programming models such as ActorSpaces and Linda.
+
+-- Consider "when?"  In sequential systems, programmers are
+responsible for specifying a total order of events in a system.  This
+results in overly constraining when events may occur.  In contrast,
+concurrent systems allow nondeterministic interleaving of messages
+processed by autonomous actors.  However, without additional
+constraints on the order of events at participating actors, an
+interleaving may lead to incorrect operations--for example, one that
+results in a deadlock.  Programming constructs such as Transactions,
+Synchronizers and (Multiparty) Session Types have been proposed to
+address this issue.
+
+-- While the Actor model assumes location transparency, depending on
+the runtime and underlying network, the question of where an actor is
+executed may have implications for execution efficiency, load
+balancing, and security.  For example, the Charm++ system has to
+address this issue for efficiently processing scientific code on
+parallel computers.
+
+-- For modeling real-time computations, questions about communication
+delays and computation time ("how long") must be resolved.
+
+-- Scalable systems exhibit stochastic behaviors, for example, due to
+message delays, which may need to be constrained in order to guarantee
+emergent properties such as stability.  Languages such as pMaude
+attempt to do this.
+
+The challenge simplifying distributed programming remains very much
+open: while the above proposals represent progress, they are piecemeal
+and incomplete.  The coming decade should provide exciting
+developments in the are of Programming Languages for Distributed
+Systems, with new abstractions and implementations building on the
+basics of the Actor model in novel directions.
